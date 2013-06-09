@@ -22,7 +22,7 @@ package com.las.walkingPaws;
 import android.os.Bundle;
 import org.apache.cordova.*;
 
-public class WalkingPawss extends DroidGap
+public class WalkingPaws extends DroidGap
 {
     @Override
     public void onCreate(Bundle savedInstanceState)
