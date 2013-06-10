@@ -33,7 +33,34 @@ var app = {
     // The scope of 'this' is the event. In order to call the 'receivedEvent'
     // function, we must explicity call 'app.receivedEvent(...);'
     onDeviceReady: function() {
+        // Init our parse SDK
+        app.initializeParse();
+    	
+        // test parse connectivity
+        //app.testParse();
+        
         app.receivedEvent('deviceready');
+    },
+    initializeParse: function() {
+    	// Init with our app info and Key
+    	var parseAppID = "ckEh7vULmKVyDPUpyPF5wlasRbIegXKruD96hzSd",
+        parseApiKey = "JzcCwRLgLTEuG8IcETcUil0ALN5ctviGg9ijIPo5";
+    	
+    	if (parseAppID == "" || parseApiKey == "") {
+    		alert("Setup a parse account and add your AppID and ApiKey in 'initializeParse'");
+    	}
+    	
+    	Parse.initialize(parseAppID, parseApiKey);
+    },
+    testParse: function() {
+    	// Create a test object and try to save it
+    	var TestObject = Parse.Object.extend("TestObject");
+    	var testObject = new TestObject();
+    	testObject.save({foo: "bar"}, {
+    	  success: function(object) {
+    		  console.log("Parse Test Successful!");
+    	  }
+    	});
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
