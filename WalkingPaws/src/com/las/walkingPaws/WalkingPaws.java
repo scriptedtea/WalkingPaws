@@ -32,7 +32,7 @@ public class WalkingPaws extends TabActivity//DroidGap
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
-//    	System.out.println("walking paws");
+//    	  System.out.println("walking paws");
 //        super.onCreate(savedInstanceState);
 //        // Set by <content src="index.html" /> in config.xml
 //        super.loadUrl(Config.getStartUrl());
@@ -42,7 +42,7 @@ public class WalkingPaws extends TabActivity//DroidGap
     	super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
          
-        TabHost tabHost = getTabHost();
+        TabHost tabHost = getTabHost(); // Creating a tab host for the two tabs: start and log
          
         // Tab for Start
         TabSpec startspec = tabHost.newTabSpec("Start");

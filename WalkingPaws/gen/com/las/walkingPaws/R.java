@@ -11,18 +11,20 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static final int globe=0x7f020000;
-        public static final int ic_launcher=0x7f020001;
-        public static final int ic_tab_example_selected=0x7f020002;
-        public static final int ic_tab_example_unselected=0x7f020003;
-        public static final int ic_tab_file_selected=0x7f020004;
-        public static final int ic_tab_file_unselected=0x7f020005;
-        public static final int icon=0x7f020006;
-        public static final int icon_log_tab=0x7f020007;
-        public static final int icon_start_tab=0x7f020008;
-        public static final int icon_stop=0x7f020009;
-        public static final int stop_selected=0x7f02000a;
-        public static final int stop_unselected=0x7f02000b;
+        public static final int cat1=0x7f020000;
+        public static final int cat2=0x7f020001;
+        public static final int dog=0x7f020002;
+        public static final int ic_launcher=0x7f020003;
+        public static final int ic_tab_example_selected=0x7f020004;
+        public static final int ic_tab_example_unselected=0x7f020005;
+        public static final int ic_tab_file_selected=0x7f020006;
+        public static final int ic_tab_file_unselected=0x7f020007;
+        public static final int icon=0x7f020008;
+        public static final int icon_log_tab=0x7f020009;
+        public static final int icon_start_tab=0x7f02000a;
+        public static final int icon_stop=0x7f02000b;
+        public static final int stop_selected=0x7f02000c;
+        public static final int stop_unselected=0x7f02000d;
     }
     public static final class id {
         public static final int RelativeLayout1=0x7f060000;
