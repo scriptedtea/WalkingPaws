@@ -60,8 +60,6 @@ public class WalkingPaws extends TabActivity//DroidGap
         // Adding all TabSpec to TabHost
         tabHost.addTab(startspec); // Adding start tab
         tabHost.addTab(logspec); // Adding log tab
-        
-        System.out.println("tablayoutactivity");
     }
 }
 

@@ -20,9 +20,14 @@ public final class R {
         public static final int icon=0x7f020006;
         public static final int icon_log_tab=0x7f020007;
         public static final int icon_start_tab=0x7f020008;
+        public static final int icon_stop=0x7f020009;
+        public static final int stop_selected=0x7f02000a;
+        public static final int stop_unselected=0x7f02000b;
     }
     public static final class id {
-        public static final int startButton=0x7f060000;
+        public static final int RelativeLayout1=0x7f060000;
+        public static final int startButton=0x7f060002;
+        public static final int stopButton=0x7f060001;
     }
     public static final class layout {
         public static final int log_layout=0x7f030000;
