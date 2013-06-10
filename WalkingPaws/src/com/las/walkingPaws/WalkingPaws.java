@@ -19,18 +19,49 @@
 
 package com.las.walkingPaws;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.widget.TabHost;
+import android.widget.TabHost.TabSpec;
+import android.app.TabActivity;
+
 import org.apache.cordova.*;
 
-public class WalkingPaws extends DroidGap
+public class WalkingPaws extends TabActivity//DroidGap
 {
     @Override
     public void onCreate(Bundle savedInstanceState)
     {
-        super.onCreate(savedInstanceState);
-        // Set by <content src="index.html" /> in config.xml
-        super.loadUrl(Config.getStartUrl());
-        //super.loadUrl("file:///android_asset/www/index.html")
+//    	System.out.println("walking paws");
+//        super.onCreate(savedInstanceState);
+//        // Set by <content src="index.html" /> in config.xml
+//        super.loadUrl(Config.getStartUrl());
+//        //super.loadUrl("file:///android_asset/www/index.html")
+//        System.out.println("walking paws");
+    	
+    	super.onCreate(savedInstanceState);
+        setContentView(R.layout.main);
+         
+        TabHost tabHost = getTabHost();
+         
+        // Tab for Start
+        TabSpec startspec = tabHost.newTabSpec("Start");
+        // setting Title and Icon for the Tab
+        startspec.setIndicator("Start", getResources().getDrawable(R.drawable.icon_start_tab));
+        Intent startIntent = new Intent(this, StartActivity.class);
+        startspec.setContent(startIntent);
+         
+        // Tab for Log
+        TabSpec logspec = tabHost.newTabSpec("Log");        
+        logspec.setIndicator("Log", getResources().getDrawable(R.drawable.icon_log_tab));
+        Intent logIntent = new Intent(this, LogActivity.class);
+        logspec.setContent(logIntent);
+         
+        // Adding all TabSpec to TabHost
+        tabHost.addTab(startspec); // Adding start tab
+        tabHost.addTab(logspec); // Adding log tab
+        
+        System.out.println("tablayoutactivity");
     }
 }
 
